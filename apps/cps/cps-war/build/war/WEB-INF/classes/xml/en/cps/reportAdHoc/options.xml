@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/reportAdHoc/options.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-reportAdHoc-allTabs5.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+ 
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+    </Entity>
+  </Model>
+  <View>
+  </View>
+</Screen>  
+

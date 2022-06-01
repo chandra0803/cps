@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessObject name="UserRoles" package="com.delphi.gfad.cps.db.gen" useXMLAttributes="true">
+  <Overview>The UserRoles business object encapsulates access to the set of Users Roles in CPS.  
+  </Overview>
+  <Dependencies>
+  </Dependencies>
+  <Columns>
+    <Column objectName="roleId"       dbType="NUMERIC" javaType="Long"/>
+    <Column objectName="role"        dbType="VARCHAR" javaType="String"/>
+  </Columns>
+  <Queries>
+    <Fetch name="UserRolesByUserId" result="obj" forSelect="true" useCache="true">
+      <SQL>
+      SELECT 
+      t1.ROLE_ID, 
+      t1.ROLE
+      FROM
+      CPS_USER_ROLE t1, CPS_USER_ROLE_TO_USER t2
+      WHERE
+      t2.USER_ID = ? AND
+      t11.ROLE_ID = t2.ROLE_ID 
+      </SQL>
+      <Parameters>
+        <Parameter name="userId" javaType="Long"/>
+      </Parameters>
+    </Fetch>
+    <Fetch name="UserRolesByNetId" result="obj" forSelect="true" useCache="true">
+      <SQL>
+      SELECT 
+      t1.ROLE_ID, 
+      t1.ROLE
+      FROM
+      CPS_USER_ROLE t1, CPS_USER_ROLE_TO_USER t2, CPS_USER t3
+      WHERE
+      t3.NET_ID = ? AND
+      t2.USER_ID = t3.USER_ID AND
+      t1.ROLE_ID = t2.ROLE_ID 
+      </SQL>
+      <Parameters>
+        <Parameter name="NET_ID" javaType="String"/>
+      </Parameters>
+    </Fetch>
+  </Queries>
+</BusinessObject>

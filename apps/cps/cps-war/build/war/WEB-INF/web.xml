@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
+
+<web-app id="WebApp_ID">
+  <display-name>CPSWAR</display-name>
+  <description>A War that contains the CPS application.</description>
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <display-name>Test Servlet Web Module</display-name>
+    <description>A Web Module that contains a Test Servlet for accessing CPS.</description>
+    <servlet-class>com.delphi.gfad.test.servlet.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PDFServlet</servlet-name>
+    <display-name>PDF Servlet Web Module</display-name>
+    <description>A Web Module that contains a Servlet for generating PDF from XSLFO.</description>
+    <servlet-class>com.delphi.gfad.coreframework.servlet.XSLFOPDFServlet</servlet-class>
+    <init-param>
+      <param-name>FOPConfigFile</param-name>
+      <param-value>config.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>EchoServlet</servlet-name>
+    <display-name>Echo Servlet Web Module</display-name>
+    <description>A Web Module that contains a Test Servlet for echoing input.</description>
+    <servlet-class>com.delphi.gfad.coreframework.servlet.EchoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MainServlet</servlet-name>
+    <display-name>MainServlet</display-name>
+    <servlet-class>com.delphi.gfad.coreframework.servlet.MainServlet</servlet-class>
+    <init-param>
+      <param-name>RequestMappings</param-name>
+      <param-value>request-mappings.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>UseTranslets</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>DependentStyleSheets</param-name>
+      <param-value>common.xsl,style.xsl,inf/navigation.xsl,screen.xsl,grid.xsl,gridStyle.xsl,gridScript.xsl</param-value>
+    </init-param>
+    <init-param>
+      <param-name>FOPConfigFile</param-name>
+      <param-value>config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>UserProfileImpl</param-name>
+      <param-value>com.delphi.gfad.cps.control.UserProfileImpl</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Navigation</param-name>
+      <param-value>navigation.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Tabs</param-name>
+      <param-value>allTabs.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>TransletClassDir</param-name>
+      <param-value>.</param-value>
+<!--
+      <param-value>C:\software\jboss-4.0.0\server\default\work</param-value>
+-->
+    </init-param>
+    <init-param>
+      <param-name>HandlerPath</param-name>
+      <param-value>cps</param-value>
+    </init-param>
+    <init-param>
+      <param-name>DisplayDOM</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>JDBC-CONTEXT</param-name>
+      <param-value>java:OracleDS</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Screen.Model.Request.Title</param-name>
+      <param-value>Delphi CPS - V1.0</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Screen.Model.Entity.ImgBaseUrl</param-name>
+      <param-value>../images</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Screen.Model.Entity.JavaScriptBaseUrl</param-name>
+      <param-value>../javascript</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Screen.Model.Entity.HtmlBaseUrl</param-name>
+      <param-value>..</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Screen.Model.Entity.RelUrl</param-name>
+      <param-value>../cps</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Screen.Model.Entity.FOPImgBaseUrl</param-name>
+      <param-value>http://localhost:8080/cps-war/images</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+     <servlet-name>TestServlet</servlet-name>
+     <url-pattern>/servlet/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+     <servlet-name>PDFServlet</servlet-name>
+     <url-pattern>/servlet/PDFServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+     <servlet-name>EchoServlet</servlet-name>
+     <url-pattern>/servlet/EchoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+     <servlet-name>MainServlet</servlet-name>
+     <url-pattern>/cps/*</url-pattern>
+  </servlet-mapping>
+</web-app>

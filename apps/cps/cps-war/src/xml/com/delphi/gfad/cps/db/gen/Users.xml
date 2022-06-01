@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessObject name="Users" package="com.delphi.gfad.cps.db.gen" useXMLAttributes="true">
+  <Overview>The Users business object encapsulates access to the set of Users in CPS.  
+  </Overview>
+  <Dependencies>
+  </Dependencies>
+  <Columns>
+    <Column objectName="userId"       dbType="NUMERIC" javaType="Long"/>
+    <Column objectName="netId"        dbType="VARCHAR" javaType="String"/>
+  </Columns>
+  <Queries>
+    <Fetch name="UsersByNetId" result="obj" forSelect="true" useCache="true">
+      <SQL>
+      SELECT 
+      t1.USER_ID, 
+      t1.NET_ID
+      FROM
+      CPS_USER t1
+      WHERE
+      t1.NET_ID = ? 
+	  AND ISACTIVE='Y' 
+      </SQL>
+      <Parameters>
+        <Parameter name="net_Id" javaType="String"/>
+      </Parameters>
+    </Fetch>
+  </Queries>
+</BusinessObject>

@@ -1,0 +1,241 @@
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:fox="http://xml.apache.org/fop/extensions">
+<fo:layout-master-set>
+<fo:simple-page-master margin-right="24.0pt" margin-left="24.0pt" margin-bottom="24.0pt" margin-top="24.0pt" master-name="Section1-rest" page-height="11in" page-width="8.5in">
+<fo:region-before extent="40.0pt"/>
+<fo:region-after extent="30.0pt"/>
+<fo:region-body margin-bottom="30.0pt" margin-top="40.0pt"/>
+</fo:simple-page-master>
+<fo:page-sequence-master master-name="Section1-ps">
+<fo:repeatable-page-master-reference master-reference="Section1-rest"/>
+</fo:page-sequence-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="Section1-ps">
+<fo:static-content flow-name="xsl-region-before">
+<fo:table table-layout="fixed">
+<fo:table-column column-width="185pt" column-number="1"/>
+<fo:table-column column-width="185pt" column-number="2"/>
+<fo:table-column column-width="185pt" column-number="3"/>
+<fo:table-body font-weight="bold" font-size="12pt">
+<fo:table-row vertical-align="middle">
+<fo:table-cell>
+<fo:external-graphic src="url(../../../../../report/delphi_report_logo.gif)"/>
+</fo:table-cell>
+<fo:table-cell text-align="center">
+<fo:block>GM SUV GMT-36X Forecast</fo:block>
+</fo:table-cell>
+<fo:table-cell text-align="right">
+<fo:block>CPS Application</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-body>
+</fo:table>
+</fo:static-content>
+<fo:static-content flow-name="xsl-region-after">
+<fo:block line-height="14pt" font-size="10pt" text-align="center">page <fo:page-number/>
+</fo:block>
+</fo:static-content>
+<fo:flow flow-name="xsl-region-body">
+<fo:table border-separation="0pt" border-collapse="separate" table-layout="fixed">
+<fo:table-column column-width="80pt" column-number="1"/>
+<fo:table-column column-width="80pt" column-number="2"/>
+<fo:table-column column-width="80pt" column-number="3"/>
+<fo:table-column column-width="80pt" column-number="4"/>
+<fo:table-column column-width="60pt" column-number="5"/>
+<fo:table-column column-width="60pt" column-number="6"/>
+<fo:table-column column-width="60pt" column-number="7"/>
+<fo:table-column column-width="60pt" column-number="8"/>
+<fo:table-header font-weight="bold" font-size="8pt" background-color="#CFCFCF">
+<fo:table-row vertical-align="sub" text-align="center">
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-right-color="black" border-right-style="solid" border-right-width="1pt" number-columns-spanned="7">
+<fo:block margin-right="2pt" padding-before="2pt">Licenses</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row text-align="center">
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">cva</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">vppc</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">brand</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">engnm</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">2003</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">2004</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt" border-right-color="black" border-right-style="solid" border-right-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">2005</fo:block>
+</fo:table-cell>
+<fo:table-cell border-top-color="black" border-top-style="solid" border-top-width="1pt" border-left-color="black" border-left-style="solid" border-left-width="1pt" border-bottom-color="black" border-bottom-style="solid" border-bottom-width="1pt" border-right-color="black" border-right-style="solid" border-right-width="1pt">
+<fo:block margin-left="2pt" padding-before="2pt">2006</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-header>
+<fo:table-body font-size="6pt">
+<fo:table-row height="14pt" text-align="left">
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt" text-align="left">
+<fo:block margin-right="2pt" margin-left="2pt">UNITED STATES</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">GMT-360</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">ENVOY</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="center" margin-right="2pt" margin-left="2pt">LL8</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row height="14pt" text-align="left">
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt" text-align="left">
+<fo:block margin-right="2pt" margin-left="2pt">UNITED STATES</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">GMT-360</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">ENVOY</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="center" margin-right="2pt" margin-left="2pt">LM4</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row height="14pt" text-align="left">
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt" text-align="left">
+<fo:block margin-right="2pt" margin-left="2pt">UNITED STATES</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">GMT-360</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">ENVOY</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="center" margin-right="2pt" margin-left="2pt">LH6</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row height="14pt" text-align="left">
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt" text-align="left">
+<fo:block margin-right="2pt" margin-left="2pt">UNITED STATES</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">GMT-360</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">TRAILBLAZER</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="center" margin-right="2pt" margin-left="2pt">LL8</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row height="14pt" text-align="left">
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt" text-align="left">
+<fo:block margin-right="2pt" margin-left="2pt">UNITED STATES</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">GMT-360</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt">Total</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="center" margin-right="2pt" margin-left="2pt"/>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row height="14pt" text-align="left">
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt" text-align="left">
+<fo:block margin-right="2pt" margin-left="2pt">Total</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt"/>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block margin-right="2pt" margin-left="2pt"/>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="center" margin-right="2pt" margin-left="2pt"/>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+<fo:table-cell border-left-color="black" border-left-style="solid" border-left-width="1pt">
+<fo:block text-align="right" margin-right="2pt" margin-left="2pt">91263</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-body>
+</fo:table>
+</fo:flow>
+</fo:page-sequence>
+</fo:root>

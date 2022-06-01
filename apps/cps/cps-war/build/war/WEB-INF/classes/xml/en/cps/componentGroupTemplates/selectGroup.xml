@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/componentGroupTemplates/selectGroup.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-cgt-allTabs0.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+      <JavaScriptBaseUrl>..\..\..\..\..\..\..\javascript</JavaScriptBaseUrl>
+      <HtmlBaseUrl>..\..\..\..\..\..\..</HtmlBaseUrl>
+    </Entity>
+  </Model>
+  <View>
+
+    <FileResultSet>
+      <File>
+        <id>1</id>
+        <dt>4-5-2004 13:05:07</dt>
+        <name>ACM_10.07.04_SAP</name>
+        <type>Source</type>
+        <comment>(comment)</comment>
+      </File>
+      <File>
+        <id>2</id>
+        <dt>4-19-2004 10:23:52</dt>
+        <name>ACPEN1</name>
+        <type>Source</type>
+        <comment>(comment)</comment>
+      </File>
+      <File>
+        <id>3</id>
+        <dt>5-2-2004 12:20:05</dt>
+        <name>dhdpn_description_08.02.04</name>
+        <type>Source</type>
+        <comment>(comment)</comment>
+      </File>
+    </FileResultSet>
+  </View>
+</Screen>  
+

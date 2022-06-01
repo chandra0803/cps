@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href=""?>
+<UserTabs>
+
+  <TabSet Url="">
+    <role-mapping role="Any"/>
+    <Tab Name="SELECT FILE" Url="selectFile.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="FILE DETAILS" Url="fileDetails.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="VIEW DATA" Url="viewData.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="FILE MERGE" Url="fileMerge.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="COPY TO" Url="copyTo.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ADD RECORD" Url="addRecord.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+
+  <BannerTabSet>
+    <role-mapping role="Any"/>
+    <Tab Name="CPS HOME" Url="../home.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="LOG OUT" Url="../login.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="DELPHI HOME" Url="http://www.delphi.com" absUrl="true">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ABOUT CPS" Url="../home.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+  </BannerTabSet>
+</UserTabs>
+

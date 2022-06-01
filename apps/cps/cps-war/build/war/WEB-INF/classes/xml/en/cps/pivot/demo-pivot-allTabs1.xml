@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href=""?>
+<UserTabs>
+
+  <TabSet Url="">
+    <role-mapping role="Any"/>
+    <Tab Name="SELECT FILE" Url="selectFile.xml" currentTab="true">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="SPECIFY CRITERIA" Url="specifyCriteria.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="VIEW TABLE" Url="viewTable.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="SAVE FILE" Url="saveFile.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+
+  <BannerTabSet>
+    <role-mapping role="Any"/>
+    <Tab Name="CPS HOME" Url="../home.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="LOG OUT" Url="../login.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="DELPHI HOME" Url="http://www.delphi.com" absUrl="true">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ABOUT CPS" Url="../home.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+  </BannerTabSet>
+</UserTabs>
+

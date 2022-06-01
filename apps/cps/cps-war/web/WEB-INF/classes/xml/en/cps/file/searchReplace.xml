@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/file/searchReplace.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-file-allTabs6.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+
+      <ResultSetPagingManager cStartRowId="1" cEndRowId="9" cPage="1" cPageNumRows="10"  
+       firstB="false" lastB="false" nPages="1" nRows="9" name="FileSearchCriteriaPagingManager" 
+       nextB="false" prevB="false"/>
+      <CurrentFile>
+        <File>
+          <id>1</id>
+          <dt>4-5-2004 13:05:07</dt>
+          <name>DRI BUICK</name>
+          <type>Source</type>
+          <comment>DRI Entries for Park Avenue and Rainier</comment>
+        </File>
+      </CurrentFile>
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+    </Entity>
+  </Model>
+  <View>
+    <FileDataResultSet>
+      <FileData>
+        <id>1</id>
+        <cva>US</cva>
+        <rng>PARK AVENUE</rng>
+        <var>PARK AVENUE</var>
+        <plat>G</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2003</run>
+        <type>C</type>
+        <yr>2003</yr>
+        <vol>13706</vol>
+      </FileData>
+      <FileData>
+        <id>2</id>
+        <cva>US</cva>
+        <rng>PARK AVENUE</rng>
+        <var>PARK AVENUE</var>
+        <plat>G</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2004</run>
+        <type>C</type>
+        <yr>2003</yr>
+        <vol>11605</vol>
+      </FileData>
+      <FileData>
+        <id>3</id>
+        <cva>US</cva>
+        <rng>PARK AVENUE</rng>
+        <var>PARK AVENUE</var>
+        <plat>G</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2004</run>
+        <type>C</type>
+        <yr>2004</yr>
+        <vol>13413</vol>
+      </FileData>
+      <FileData>
+        <id>4</id>
+        <cva>US</cva>
+        <rng>PARK AVENUE</rng>
+        <var>PARK AVENUE</var>
+        <plat>G</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2005</run>
+        <type>C</type>
+        <yr>2004</yr>
+        <vol>13895</vol>
+      </FileData>
+      <FileData>
+        <id>5</id>
+        <cva>US</cva>
+        <rng>PARK AVENUE</rng>
+        <var>PARK AVENUE</var>
+        <plat>G</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2005</run>
+        <type>C</type>
+        <yr>2005</yr>
+        <vol>15681</vol>
+      </FileData>
+      <FileData>
+        <id>6</id>
+        <cva>US</cva>
+        <rng>RAINIER</rng>
+        <var>RAINIER</var>
+        <plat>GMT360</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2004</run>
+        <type>L</type>
+        <yr>2003</yr>
+        <vol>8199</vol>
+      </FileData>
+      <FileData>
+        <id>7</id>
+        <cva>US</cva>
+        <rng>RAINIER</rng>
+        <var>RAINIER</var>
+        <plat>GMT360</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2004</run>
+        <type>L</type>
+        <yr>2004</yr>
+        <vol>28110</vol>
+      </FileData>
+      <FileData>
+        <id>8</id>
+        <cva>US</cva>
+        <rng>RAINIER</rng>
+        <var>RAINIER</var>
+        <plat>GMT360</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2005</run>
+        <type>L</type>
+        <yr>2004</yr>
+        <vol>27996</vol>
+      </FileData>
+      <FileData>
+        <id>9</id>
+        <cva>US</cva>
+        <rng>RAINIER</rng>
+        <var>RAINIER</var>
+        <plat>GMT360</plat>
+        <brnd>BUICK</brnd>
+        <man>GM</man>
+        <area>N America</area> 
+        <run>2005</run>
+        <type>L</type>
+        <yr>2005</yr>
+        <vol>26631</vol>
+      </FileData>
+    </FileDataResultSet>
+  </View>
+</Screen>  
+

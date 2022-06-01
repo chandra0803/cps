@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../ant2html.xsl"?>
+
+ <!DOCTYPE project [
+      <!ENTITY global-build SYSTEM "../../global-build.xml">
+    ]>  
+
+<project name="CPS - Corporate Planning System application" basedir="." default="all">
+    
+  <property name="build.project"   value="project"/>
+
+  <property environment="env"/>
+  <property name="jboss.home" location="${env.JBOSS_HOME}"/>
+
+  <!-- ************************************* -->
+  <!-- Task: PROJECT INIT                    -->
+  <!-- ************************************* -->
+	
+  <target name="project-init" description="Initializes the build process">
+  </target>
+
+  &global-build;  
+
+  <!-- ************************************* -->
+  <!-- Task: ALL                             -->
+  <!-- ************************************* -->
+
+  <target name="all" depends="log-start,clean,prepare,compile,generate-war,generate-war-config,war,deploy-jboss,log-stop" description="Performs end-to-end build and packaging of a Web application">
+  </target>
+
+</project>
+
+

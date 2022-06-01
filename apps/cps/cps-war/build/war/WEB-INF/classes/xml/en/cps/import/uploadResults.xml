@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/import/uploadResults.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-import-allTabs3.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+      <JavaScriptBaseUrl>..\..\..\..\..\..\..\javascript</JavaScriptBaseUrl>
+      <HtmlBaseUrl>..\..\..\..\..\..\..</HtmlBaseUrl>
+    </Entity>
+  </Model>
+  <View>
+    <UploadStatusResultSet>
+      <UploadStatus>
+        <rows>44</rows>
+        <time>00:54</time>
+        <errors>2</errors>
+      </UploadStatus>
+    </UploadStatusResultSet>
+    <UploadErrorResultSet>
+      <UploadError>
+        <id>1</id>
+        <row>22</row>
+        <attr>vehvar</attr>
+        <val>RAINNER</val>
+        <errType>Attribute Value</errType>
+        <err>This is an uknown attribte value</err>
+        <res>Choose existing vehvar from valid values.</res>
+      </UploadError>
+      <UploadError>
+        <id>2</id>
+        <row>41</row>
+        <attr>cva</attr>
+        <val>NE</val>
+        <errType>Attribute Value</errType>
+        <err>This is an uknown attribte value</err>
+        <res>Choose existing cva from valid values.</res>
+      </UploadError>
+    </UploadErrorResultSet>
+  </View>
+</Screen>  
+

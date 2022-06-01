@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/cps/login.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-login-allTabs.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+
+      &allTabs;
+
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../cps</RelUrl>
+    </Entity>
+  </Model>
+  <View>
+    <ChangePasswordUrl>http://www.delphi.com</ChangePasswordUrl>
+  </View>
+</Screen>  
+

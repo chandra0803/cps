@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/componentGroupTemplates/defineCriteria.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-cgt-allTabs2.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+      <JavaScriptBaseUrl>..\..\..\..\..\..\..\javascript</JavaScriptBaseUrl>
+      <HtmlBaseUrl>..\..\..\..\..\..\..</HtmlBaseUrl>
+    </Entity>
+  </Model>
+  <View>
+
+<ColumnHeaderResultSet row="1">
+<ColumnHeader>
+  <width>50</width>
+  <text>Row</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>80</width>
+  <text>Component</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>500</width>
+  <text>Match</text>
+  <span>3</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>Modifier</text>
+  <span>1</span>
+</ColumnHeader>
+</ColumnHeaderResultSet>
+
+<ColumnHeaderResultSet row="2">
+<ColumnHeader>
+  <width>50</width>
+  <text></text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>80</width>
+  <text>dhhtrac</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>200</width>
+  <text>vehppcode</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>200</width>
+  <text>mktdiv</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>100</width>
+  <text>modrn</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>75</width>
+  <text>veh %</text>
+  <span>1</span>
+</ColumnHeader>
+
+</ColumnHeaderResultSet>
+<ComponentDetailResultSet>
+<ComponentDetail><col>C60</col><col>GMX-130</col><col>OLDSMOBILE</col><col>2003:2006</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMX-130</col><col>PONTIAC,CHEVROLET</col><col>2003:2006</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMX-381</col><col>PONTIAC</col><col>2005</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMX-381</col><col>PONTIAC</col><col>2006:2015</col><col>75</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C68</col><col>GMX-381</col><col>PONTIAC</col><col>2006:2015</col><col>25</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>J</col><col>CHEVROLET</col><col>2003:2005</col><col>6</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>J</col><col>CHEVROLET</col><col>2003:2005</col><col>94</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>J-NG,GMX-001</col><col>CHEVROLET</col><col>2005:2015</col><col>7</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>J-NG,GMX-001</col><col>CHEVROLET</col><col>2005:2015</col><col>93</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMT-001</col><col></col><col>2006:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>J</col><col>PONTIAC</col><col>2003:2005</col><col>14</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>J</col><col>PONTIAC</col><col>2003:2005</col><col>86</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>J-NG,GMX-001</col><col>PONTIAC</col><col>2005:2015</col><col>7</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>J-NG,GMX-001</col><col>PONTIAC</col><col>2005:2015</col><col>93</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>S5S</col><col>CADILLAC</col><col>2003:2004</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-295</col><col></col><col>2004:2007</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-270,GMX-272</col><col>CADILLAC</col><col>2003:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>P-90</col><col></col><col>2003:2006</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMX-380,GMX-380-NG</col><col></col><col>2004:2015</col><col>78</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C68</col><col>GMX-380,GMX-380-NG</col><col></col><col>2004:2015</col><col>22</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>C5</col><col>CHEVROLET</col><col>2003:2004</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-245</col><col>CHEVROLET</col><col>2004:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-215</col><col>CADILLAC</col><col>2003:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>GMX-357,GMX-002</col><col>SATURN</col><col>2003:2015</col><col>2</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMX-357,GMX-002</col><col>SATURN</col><col>2003:2015</col><col>98</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>97PA</col><col>BUICK</col><col>2003:2005</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-160</col><col>OLDSMOBILE</col><col>2003:2004</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>MS-2000</col><col>BUICK</col><col>2003:2005</col><col>15</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>MS-2000</col><col>BUICK</col><col>2003:2005</col><col>85</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-365,GMX-051</col><col>BUICK</col><col>2005:2015</col><col>24</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-365,GMX-051</col><col>BUICK</col><col>2005:2015</col><col>76</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMX-210</col><col>CHEVROLET</col><col>2003:2005</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMX-230,GMX-231</col><col>CHEVROLET</col><col>2003:2005</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMX-211,GMX-231</col><col></col><col>2006:2015</col><col>74</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-211,GMX-231</col><col></col><col>2006:2015</col><col>26</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>MS-2000</col><col>PONTIAC</col><col>2003</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-367,GMX-285</col><col>PONTIAC</col><col>2004</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-367,GMX-285</col><col>PONTIAC</col><col>2005:2015</col><col>75</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-367,GMX-285</col><col>PONTIAC</col><col>2005:2015</col><col>25</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-220,GMX-220-NG</col><col>BUICK</col><col>2003:2006</col><col>70</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-220,GMX-220-NG</col><col>BUICK</col><col>2003:2006</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-222</col><col>BUICK</col><col>2006:2015</col><col>70</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-222</col><col>BUICK</col><col>2006:2015</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>1998-005,GMX-342</col><col>BUICK</col><col>2005:2010</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-310</col><col>PONTIAC</col><col>2003:2007</col><col>70</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMX-310</col><col>PONTIAC</col><col>2003:2007</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-305</col><col></col><col>2003:2015</col><col>40</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-305</col><col></col><col>2003:2015</col><col>60</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-325</col><col>CHEVROLET</col><col>2003:2006</col><col>2</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-325</col><col>CHEVROLET</col><col>2003:2006</col><col>98</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-355</col><col>CHEVROLET</col><col>2003:2015</col><col>97</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-355</col><col>CHEVROLET</col><col>2003:2015</col><col>3</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-325</col><col>GMC</col><col>2003:2006</col><col>2</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-325</col><col>GMC</col><col>2003:2006</col><col>98</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-355</col><col>GMC</col><col>2004:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-330</col><col></col><col>2002:2006</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-360,GMT-361</col><col>CHEVROLET,OLDSMOBILE</col><col>2003:2015</col><col>40</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-360,GMT-361</col><col>CHEVROLET,OLDSMOBILE</col><col>2003:2015</col><col>60</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-360,GMT-361</col><col>GMC,ISUZU,BUICK,SAAB</col><col>2003:2015</col><col>40</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-360,GMT-361</col><col>GMC,ISUZU,BUICK,SAAB</col><col>2003:2015</col><col>60</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-368,GMT-369</col><col>CHEVROLET</col><col>2003:2015</col><col>60</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-368,GMT-369</col><col>CHEVROLET</col><col>2003:2015</col><col>40</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C36</col><col>GMT-370,GMT-371</col><col></col><col>2003:2015</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C69</col><col>GMT-370,GMT-371</col><col></col><col>2003:2015</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-455</col><col></col><col>2003:2007</col><col>48</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-455</col><col></col><col>2003:2007</col><col>52</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>GMT-530</col><col></col><col>2003:2007</col><col>27</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-530</col><col></col><col>2003:2007</col><col>73</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>GMT-540</col><col></col><col>2003</col><col>80</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-540</col><col></col><col>2003</col><col>20</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C41</col><col>GMT-560</col><col></col><col>2003:2015</col><col>26</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-560</col><col></col><col>2003:2015</col><col>74</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C36</col><col>GMT-560</col><col></col><col>2003:2015</col><col>2</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C36</col><col>GMT-610</col><col></col><col>2003:2015</col><col>1</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-610</col><col></col><col>2003:2015</col><col>11</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMT-610</col><col></col><col>2003:2015</col><col>89</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C69</col><col>GMT-610</col><col></col><col>2003:2015</col><col>27</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-800,GMT-800-NG</col><col></col><col>2003:2015</col><col>5</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-800,GMT-800-NG</col><col></col><col>2003:2015</col><col>95</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-800E,GMT-800E-NG</col><col></col><col>2003:2015</col><col>4</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-800E,GMT-800E-NG</col><col></col><col>2003:2015</col><col>40</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-800E,GMT-800E-NG</col><col></col><col>2003:2015</col><col>56</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-805,GMT-805-NG</col><col></col><col>2003:2015</col><col>77</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-805,GMT-805-NG</col><col></col><col>2003:2015</col><col>23</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-806,GMT-806-NG</col><col></col><col>2003:2015</col><col>77</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-806,GMT-806-NG</col><col></col><col>2003:2015</col><col>23</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C34</col><col>GMT-820,GMT-820-NG</col><col></col><col>2003:2015</col><col>86</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C69</col><col>GMT-820,GMT-820-NG</col><col></col><col>2003:2015</col><col>2</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-820,GMT-820-NG</col><col></col><col>2003:2015</col><col>70</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-820,GMT-820-NG</col><col></col><col>2003:2015</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C69</col><col>GMT-830,GMT-830-NG</col><col></col><col>2003:2015</col><col>2</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-830,GMT-830-NG</col><col></col><col>2003:2015</col><col>70</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-830,GMT-830-NG</col><col></col><col>2003:2015</col><col>30</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C34</col><col>GMT-830,GMT-830-NG</col><col></col><col>2003:2015</col><col>98</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-836-NG</col><col></col><col>2005:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ2</col><col>GMT-880,GMT-880S</col><col></col><col>2003:2015</col><col>56</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMT-880,GMT-880-NG</col><col></col><col>2003:2015</col><col>43</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C42</col><col>GMT-880,GMT-880-NG</col><col></col><col>2003:2015</col><col>1</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C36</col><col>M/L</col><col></col><col>2003:2005</col><col>37</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>M/L</col><col></col><col>2003:2005</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C69</col><col>M/L</col><col></col><col>2003:2005</col><col>44</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>P00006</col><col></col><col>2006:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C60</col><col>GMX-125</col><col></col><col>2003:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>H2,GMT-440</col><col></col><col>2003:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>CJ3</col><col>GMX-341,GMX-342</col><col></col><col>2006:2015</col><col>100</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C67</col><col>GMX-385</col><col></col><col>2007:2015</col><col>78</col><col>1</col></ComponentDetail>
+<ComponentDetail><col>C68</col><col>GMX-385</col><col></col><col>2007:2015</col><col>22</col><col>1</col></ComponentDetail>
+</ComponentDetailResultSet>
+
+
+
+  
+  
+  
+  </View>
+</Screen>  
+

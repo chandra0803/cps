@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/manageScript/scriptResults.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-manageScript-allTabs2.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+ 
+      <CurrentFile id="1">
+        <File>
+          <id>1</id>
+          <dt>4-5-2004 13:05:07</dt>
+          <name>DRI BUICK</name>
+          <type>Source</type>
+          <comment>DRI Entries for Park Avenue and Rainier</comment>
+        </File>
+      </CurrentFile>
+      <CurrentFile id="2">
+        <File>
+          <id>2</id>
+          <dt>6-2-2004 09:42:07</dt>
+          <name>DRI BUICK PA ONLY</name>
+          <type>Source</type>
+          <comment>DRI Entries for Park Avenue</comment>
+        </File>
+      </CurrentFile>
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+    </Entity>
+  </Model>
+  <View>
+  </View>
+</Screen>  
+

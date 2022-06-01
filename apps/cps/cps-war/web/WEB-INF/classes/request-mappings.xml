@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<request-mappings>
+  
+	<url-mapping url="/login" unauthorized-default="true">
+		<request-handler-class>com.delphi.gfad.cps.webInterface.handlers.CPSLoginHandlerNoAuth</request-handler-class>
+		<xslt-stylesheet value="cps/login.xsl"/>
+		<role-mapping value="Any"/>
+	</url-mapping>
+
+	<url-mapping url="/logout">
+		<request-handler-class>com.delphi.gfad.cps.webInterface.handlers.LogoutHandler</request-handler-class>
+		<role-mapping value="Any"/>
+	</url-mapping>
+
+	<url-mapping url="/home">
+		<request-handler-class>com.delphi.gfad.cps.webInterface.handlers.HomeHandler</request-handler-class>
+		<xslt-stylesheet value="cps/home.xsl"/>
+		<role-mapping value="Any"/>
+	</url-mapping>
+
+	<url-mapping url="/about">
+		<xslt-stylesheet value="cps/about.xsl"/>
+		<role-mapping value="Any"/>
+	</url-mapping>
+
+	<url-mapping url="/selectfile">
+		<request-handler-class>com.delphi.gfad.cps.webInterface.handlers.FileSelectHandler</request-handler-class>
+		<xslt-stylesheet value="cps/file/selectFile.xsl"/>
+		<role-mapping value="Any"/>
+	</url-mapping>
+
+</request-mappings>
+
+

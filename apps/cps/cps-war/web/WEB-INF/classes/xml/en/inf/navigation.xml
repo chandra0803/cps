@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<UserNavigation>
+  <Menu bgcolor="#E0E0E0" heading="Delphi CPS">
+	  <role-mapping role="Analysis"/>
+	  <role-mapping role="Scripting"/>
+    <Item href="selectfile" name="FILES" value="" icon="bluebutton.gif" textcolor="blue">
+	  <role-mapping role="Analysis"/>
+	  <role-mapping role="Scripting"/>
+    </Item>
+    <Item href="home.xml" name="AUTOMATION" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Scripting"/>
+    </Item>
+  </Menu>
+  <Menu bgcolor="#E0E0E0" corner-image-color="gray" heading="Import/Export" name="1">
+    <role-mapping role="Analysis"/>
+	<role-mapping role="Scripting"/>
+	<role-mapping role="Admin"/>
+    <Item href="import/uploadFile.xml" name="IMPORT FILE" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+	  <role-mapping role="Scripting"/>
+	  <role-mapping role="Admin"/>
+    </Item>
+    <Item href="export/selectFile.xml" name="EXPORT FILE" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+	  <role-mapping role="Scripting"/>
+	  <role-mapping role="Admin"/>
+    </Item>
+  </Menu>
+  <Menu bgcolor="#E0E0E0" corner-image-color="gray" heading="On-Line Analysis" name="2">
+    <role-mapping role="Analysis"/>
+    <Item href="pivot/selectFile.xml" name="PIVOT TABLE" value="" icon="bluebutton.gif" textcolor="blue">
+     <role-mapping role="Analysis"/>
+    </Item>
+    <Item href="allocation/selectFiles.xml" name="VOLUME ALLOCATION" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+    </Item>
+  </Menu>
+  <Menu bgcolor="#E0E0E0" corner-image-color="gray" heading="Reports" name="3">
+    <role-mapping role="Analysis"/>
+    <Item href="reportAdHoc/reportDetails.xml" name="AD-HOC" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+    </Item>
+    <Item href="reportCompare/compareFiles.xml" name="FILE COMPARISON" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+    </Item>
+  </Menu>
+  <Menu bgcolor="#E0E0E0" corner-image-color="gray" heading="Automation" name="4">
+    <role-mapping role="Admin"/>
+	<role-mapping role="Scripting"/>
+    <Item href="manageScript/scriptOverview.xml" name="MANAGE SCRIPTS" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Admin"/>
+    </Item>
+    <Item href="home.xml" name="SCHEDULE AUTOMATION" value="" icon="bluebutton.gif" textcolor="blue">
+     <role-mapping role="Scripting"/>
+    </Item>
+  </Menu>
+  <Menu bgcolor="#E0E0E0" corner-image-color="gray" heading="Administration" name="5">
+    <role-mapping role="Admin"/>
+    <Item href="home.xml" name="FILES" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Admin"/>
+    </Item>
+    <Item href="home.xml" name="ATTRIBUTE VALUES" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Admin"/>
+    </Item>
+    <Item href="componentGroupTemplates/selectGroup.xml" name="MAINTAIN COMPONENT GROUP" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+      <role-mapping role="Scripting"/>
+      <role-mapping role="Admin"/>
+    </Item>
+    <Item href="home.xml" name="REPORT TEMPLATES" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Analysis"/>
+	  <role-mapping role="Scripting"/>
+	  <role-mapping role="Admin"/>
+    </Item>
+<!--
+    <Item href="home.xml" name="MANAGE AUTOMATION" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Admin"/>
+    </Item>
+-->
+    <Item href="home.xml" name="MAINTAIN USERS" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Admin"/>
+    </Item>
+  </Menu>
+  <Menu bgcolor="#E0E0E0" corner-image-color="gray" heading="Help" name="5">
+    <role-mapping role="Any"/>
+    <Item href="home.xml" name="OVERVIEW" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Any"/>
+    </Item>
+    <Item href="home.xml" name="USING FILES" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Any"/>
+    </Item>
+    <Item href="home.xml" name="USING ON-LINE ANALYSIS" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Any"/>
+    </Item>
+    <Item href="home.xml" name="USING REPORTS" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Any"/>
+    </Item>
+    <Item href="home.xml" name="ADMINISTRATION" value="" icon="bluebutton.gif" textcolor="blue">
+      <role-mapping role="Any"/>
+    </Item>
+  </Menu>
+ </UserNavigation>

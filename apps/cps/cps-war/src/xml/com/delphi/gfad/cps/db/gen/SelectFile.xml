@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessObject name="SelectFile" package="com.delphi.gfad.cps.db.gen" useXMLAttributes="false">
+  <Overview>The Users business object encapsulates access to the set of CPS File Select.  
+  </Overview>
+  <Dependencies>
+    <Table name="CPS_FILE"/>
+  </Dependencies>
+  <Columns>
+    <Column objectName="id"			  dbType="NUMERIC" javaType="Long"/>
+    <Column objectName="dt"			  dbType="DATE" javaType="Date"/>
+	<Column objectName="name"		  dbType="VARCHAR" javaType="String"/>
+	<Column objectName="comment"	  dbType="VARCHAR" javaType="String"/>
+  </Columns>
+  <Queries>
+    <Fetch name="FileInfo" result="obj" forSelect="true" useCache="false">
+      <SQL>
+      SELECT T2.FILE_ID, 
+			 T2.DT_CREATE, 
+			 T2.TXT_FILE_NAME,
+			 T2.COMMENTS
+      FROM CPS_USER T1, CPS_FILE T2
+	  WHERE T1.USER_ID = T2.USER_ID
+			AND T1.NET_ID = ? 
+	  ORDER BY T2.TXT_FILE_NAME
+      </SQL>
+      <Parameters>
+		  <Parameter name="netid" javaType="String"/>
+      </Parameters>
+    </Fetch>
+  </Queries>
+</BusinessObject>

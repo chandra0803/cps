@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/reportCompare/viewReport.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+      <JavaScriptBaseUrl>..\..\..\..\..\..\..\javascript</JavaScriptBaseUrl>
+      <HtmlBaseUrl>..\..\..\..\..\..\..\</HtmlBaseUrl>
+    </Entity>
+  </Model>
+  <View>
+<Grid id="1">
+<ColumnHeaderResultSet row="1">
+
+<ColumnHeader>
+  <width>100</width>
+  <text>vehppcode</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>100</width>
+  <text>brand</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>75</width>
+  <text>2004</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>2005</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>2006</text>
+  <span>1</span>
+</ColumnHeader>
+
+</ColumnHeaderResultSet>
+
+<ComponentDetailResultSet>
+<ComponentDetail><col>GMT-360</col><col> </col><col> </col><col> </col><col> </col></ComponentDetail>
+<ComponentDetail><col> </col><col>ENVOY</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+<ComponentDetail><col> </col><col>TRAILBLAZER</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+
+<ComponentDetail><col>GMT-361</col><col> </col><col> </col><col> </col><col> </col></ComponentDetail>
+<ComponentDetail><col> </col><col>ENVOY</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+<ComponentDetail><col> </col><col>TRAILBLAZER</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+</ComponentDetailResultSet>
+</Grid>
+
+<Grid id="2">
+<ColumnHeaderResultSet row="1">
+
+<ColumnHeader>
+  <width>100</width>
+  <text>vehppcode</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>100</width>
+  <text>brand</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>75</width>
+  <text>2004</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>2005</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>2006</text>
+  <span>1</span>
+</ColumnHeader>
+
+</ColumnHeaderResultSet>
+
+<ComponentDetailResultSet>
+<ComponentDetail><col>GMT-360</col><col> </col><col> </col><col> </col><col> </col></ComponentDetail>
+<ComponentDetail><col> </col><col>ENVOY</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+<ComponentDetail><col> </col><col>TRAILBLAZER</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+
+<ComponentDetail><col>GMT-361</col><col> </col><col> </col><col> </col><col> </col></ComponentDetail>
+<ComponentDetail><col> </col><col>ENVOY</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+<ComponentDetail><col> </col><col>TRAILBLAZER</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+</ComponentDetailResultSet>
+</Grid>
+
+<Grid id="3">
+<ColumnHeaderResultSet row="1">
+
+<ColumnHeader>
+  <width>100</width>
+  <text>vehppcode</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>100</width>
+  <text>brand</text>
+  <span>1</span>
+</ColumnHeader>
+
+<ColumnHeader>
+  <width>75</width>
+  <text>2004</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>2005</text>
+  <span>1</span>
+</ColumnHeader>
+<ColumnHeader>
+  <width>75</width>
+  <text>2006</text>
+  <span>1</span>
+</ColumnHeader>
+
+</ColumnHeaderResultSet>
+
+<ComponentDetailResultSet>
+<ComponentDetail><col>GMT-360</col><col> </col><col> </col><col> </col><col> </col></ComponentDetail>
+<ComponentDetail><col> </col><col>ENVOY</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+<ComponentDetail><col> </col><col>TRAILBLAZER</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+
+<ComponentDetail><col>GMT-361</col><col> </col><col> </col><col> </col><col> </col></ComponentDetail>
+<ComponentDetail><col> </col><col>ENVOY</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+<ComponentDetail><col> </col><col>TRAILBLAZER</col><col>147107</col><col>147107</col><col>147107</col></ComponentDetail>
+</ComponentDetailResultSet>
+</Grid>
+
+
+  </View>
+</Screen>  
+

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href=""?>
+<Tabs>
+
+	<TabSet Url="selectfile">
+    <role-mapping role="Any"/>
+    <Tab Name="SELECT FILE" Url="/selectfile" currentTab="true">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="FILE DETAILS" Url="fileDetails.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="VIEW DATA" Url="viewData.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="FILE MERGE" Url="fileMerge.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="COPY TO" Url="copyTo.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ADD RECORD" Url="addRecord.xml">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>  
+    
+  
+  <TabSet Url="error">
+    <Tab Name="ERROR" Url="error">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="">
+    <Tab Name="WHAT'S NEW" Url="home">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="MY PROFILE" Url="profile">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/admin/">
+    <Tab Name="MANAGE USERS" Url="manage-users">
+      <role-mapping role="Admin"/>
+    </Tab>
+    <Tab Name="MANAGE PROFILES" Url="manage-profiles">
+      <role-mapping role="Admin"/>
+    </Tab>
+    <Tab Name="MANAGE MRP USER PLANTS" Url="manage-mrp-user-plants">
+      <role-mapping role="Admin"/>
+    </Tab>
+    <Tab Name="MANAGE BROADCAST MESSAGE" Url="home-message">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="MANAGE CUMULATIVE PART QUANTITY SHIPPED" Url="manage-cumulative-qty">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="MANAGE VENDOR STOCK" Url="manage-vendor-stock">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/asn/">
+    <Tab Name="VIEW ADVANCE SHIP NOTICES" Url="view-asns">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ADVANCE SHIP NOTICE DETAILS" Url="view-asn" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/createasn/">
+    <Tab Name="1. SELECT PLANT" Url="create-asn" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="2. SHIPMENT HEADER" Url="header" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="3. SELECT CONTAINER(S)" Url="containers" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="4. REVIEW" Url="submit" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="5. GENERATE LABELS" Url="label" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/delfor/">
+    <Tab Name="VIEW FORECASTS" Url="view-delfors">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="FORECAST DETAILS" Url="view-delfor" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/order/">
+    <Tab Name="VIEW ORDERS" Url="view-orders">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ORDER DETAILS" Url="view-order" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/general/">
+    <Tab Name="VIEW GENERAL MESSAGES" Url="view-generals">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="GENERAL MESSAGE DETAILS" Url="view-general" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/deljit/">
+    <Tab Name="VIEW SHIP SCHEDULES" Url="view-deljits">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="SHIP SCHEDULE DETAILS" Url="view-deljit" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/aperak/">
+    <Tab Name="VIEW ASN ERRORS" Url="view-aperaks">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="ASN ERROR DETAILS" Url="view-aperak" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+  <TabSet Url="webedi/recadv/">
+    <Tab Name="VIEW RECEIVING ADVICE" Url="view-recadvs">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="RECEIVING ADVICE DETAILS" Url="view-recadv" href="false">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+
+  <TabSet Url="webedi/reports/">
+    <Tab Name="FORECAST SUMMARY REPORT" Url="forecast-summary">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="DELJIT SUMMARY REPORT (NOT KANBAN CALLS)" Url="deljit-summary">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="LOGIN STATISTICS REPORT" Url="login">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="LABEL GENERATION REPORT" Url="labels">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="ASN GENERATION REPORT" Url="asns">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="USER PROFILE REPORT" Url="profile">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="VENDOR ASSIGNMENT REPORT" Url="vendor-assignment">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="DELINS STATUS REPORT" Url="delins-status">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="ASN STATUS REPORT" Url="asn-status">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="KANBAN STATUS REPORT" Url="kanban-status">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+    <Tab Name="HEURISTIC MONITOR" Url="heuristic-monitor">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+    </Tab>
+  </TabSet>
+
+  <TabSet Url="webedi/mdso/">
+    <Tab Name="NEW MDSO USERS" Url="mdso-user-profile">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+      <role-mapping role="InternalUser"/>
+    </Tab>
+    <Tab Name="MDSO USER PROFILE REPORT" Url="mdso-user-profile-report">
+      <role-mapping role="Admin"/>
+      <role-mapping role="MRPController"/>
+      <role-mapping role="InternalUser"/>
+    </Tab>
+   </TabSet>
+
+  <TabSet Url="webedi/help/">
+    <Tab Name="CONTACT INFORMATION" Url="contact-information">
+      <role-mapping role="Any"/>
+    </Tab>
+    <Tab Name="USERS MANUAL" Url="users-manual">
+      <role-mapping role="Any"/>
+    </Tab>
+  </TabSet>
+</Tabs>

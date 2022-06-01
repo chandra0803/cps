@@ -1,0 +1,57 @@
+<?xml version= "1.0" encoding= "UTF-8" ?>
+ <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/' debug="true" >
+
+    <appender name= "stdout" class= "org.apache.log4j.ConsoleAppender" >
+       <layout class= "org.apache.log4j.PatternLayout" >
+       <param name= "ConversionPattern" value= "%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{1}] %m%n"/>
+       </layout>
+    </appender>
+
+    <appender name= "debugfile" class= "org.apache.log4j.RollingFileAppender" >
+        <param name= "File" value= "cps_debug.log"/>
+        <param name= "Append" value= "true"/>
+        <param name= "MaxFileSize" value= "200KB"/>
+        <param name= "MaxBackupIndex" value= "3"/>
+        <layout class= "org.apache.log4j.PatternLayout">
+            <param name= "ConversionPattern" value= "%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{1}] %m%n"/>
+        </layout>
+        <filter class= "org.apache.log4j.varia.LevelMatchFilter" >
+          <param name= "LevelToMatch" value= "WARN" />
+          <param name= "AcceptOnMatch" value= "false" />
+        </filter>
+        <filter class= "org.apache.log4j.varia.LevelMatchFilter" >
+          <param name= "LevelToMatch" value= "INFO" />
+          <param name= "AcceptOnMatch" value= "false" />
+        </filter>
+        <filter class= "org.apache.log4j.varia.LevelMatchFilter" >
+          <param name= "LevelToMatch" value= "ERROR" />
+          <param name= "AcceptOnMatch" value= "false" />
+        </filter>
+        <filter class= "org.apache.log4j.varia.LevelMatchFilter" >
+          <param name= "LevelToMatch" value= "FATAL" />
+          <param name= "AcceptOnMatch" value= "false" />
+        </filter>
+    </appender>
+
+    <appender name= "errorfile" class= "org.apache.log4j.RollingFileAppender" >
+        <param name= "File" value= "cps_error.log"/>
+        <param name= "Append" value= "true"/>
+        <param name= "MaxFileSize" value= "150KB"/>
+        <param name= "MaxBackupIndex" value= "3"/>
+        <layout class= "org.apache.log4j.PatternLayout">
+           <param name= "ConversionPattern" value= "%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{1}] %m%n"/>
+        </layout>
+        <filter class= "org.apache.log4j.varia.LevelRangeFilter">
+             <param name= "LevelMin" value= "INFO" />
+        </filter>
+    </appender>
+
+    <root>
+        <priority value= "debug"/>
+        <appender-ref ref= "debugfile"/>
+        <appender-ref ref= "errorfile"/>
+    </root>
+
+</log4j:configuration>

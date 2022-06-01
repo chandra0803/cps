@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+
+<!--
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/administration/maintain_users.xsl"?>
+-->
+
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+
+       <!ENTITY allTabs SYSTEM "../demo-login-allTabs.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+
+      <SelectFileCriteria name="*" type="Allocation" fromDt="01-05-2004" toDt="10-05-2004"/>
+      <ResultSetPagingManager cStartRowId="1" cEndRowId="5" cPage="1" cPageNumRows="10"  
+       firstB="false" lastB="false" nPages="1" nRows="5" name="FileSearchCriteriaPagingManager" 
+       nextB="false" prevB="false"/>
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+      <JavaScriptBaseUrl>..\..\..\..\..\..\..\javascript</JavaScriptBaseUrl>
+      <HtmlBaseUrl>..\..\..\..\..\..\..</HtmlBaseUrl>
+    </Entity>
+  </Model>
+  <View>
+    <FileResultSet>
+      <File>
+        <userid>101</userid>
+	<netid>czqsha1</netid>
+        <roleid>Admin</roleid>
+        <comment>Admin user</comment>
+      </File>
+      <File>
+        <userid>101</userid>
+	<netid>czqjhb2</netid>
+        <roleid>Scripting</roleid>
+        <comment>Admin user</comment>
+      </File>
+
+      <File>
+        <userid>101</userid>
+	<netid>czqswc3</netid>
+        <roleid>OnLine</roleid>
+        <comment>Admin user</comment>
+      </File>
+
+      <File>
+        <userid>102</userid>
+	<netid>czkqmh4</netid>
+        <roleid>onLine</roleid>
+        <comment>scripting user</comment>
+      </File>
+
+      <File>
+        <userid>103</userid>
+	<netid>czqkth7</netid>
+        <roleid>Admin</roleid>
+        <comment>Online user</comment>
+      </File>
+
+      <File>
+        <userid>104</userid>
+	<netid>czqkeh0</netid>
+        <roleid>Scripting</roleid>
+        <comment>Scripting user</comment>
+      </File>
+
+
+
+    </FileResultSet>
+  </View>
+</Screen>  
+

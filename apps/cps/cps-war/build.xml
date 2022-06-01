@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="ant2html.xsl"?>
+
+ <!DOCTYPE project [
+      <!ENTITY propertiesAndPaths SYSTEM "propertiesAndPaths.xml">
+      <!ENTITY taskdefs SYSTEM "taskdefs.xml">
+    ]>  
+    
+        &propertiesAndPaths;
+        &taskdefs;
+
+
+<project name="Generic ANT Script for building Delphi J2EE applications" basedir="." default="all">
+
+  <property name="build.project"   value="project"/>
+
+
+  <!-- ************************************* -->
+  <!-- Task: INIT                            -->
+  <!-- ************************************* -->
+	
+  <target name="init" depends="project-init" description="Initializes the build process">
+    <tstamp/>
+    <property file="../../global.properties"/>
+    <property file="project.properties"/>
+    <property file="build.properties"/>
+    <echo message="ant.version: ${ant.version}"/>
+    <echo message="ant.java.version: ${ant.java.version}"/>
+    <buildnumber/>
+    <echo message="build number: ${build.number}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: START-INFO                      -->
+  <!-- ************************************* -->
+
+  <target name="start-info" depends="init" description="Displays starting information.">
+    <tstamp prefix="dev.info.time">
+      <format property="dev.info.time" pattern="yyyy/MM/dd hh:mm aa" locale="en"/>
+    </tstamp>
+    <echo message="Delphi J2EE build starting at ${dev.info.time}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: END-INFO                        -->
+  <!-- ************************************* -->
+
+  <target name="end-info" depends="init" description="Displays ending information.">
+    <tstamp prefix="dev.info.time">
+      <format property="dev.info.time" pattern="yyyy/MM/dd hh:mm aa" locale="en"/>
+    </tstamp>
+    <echo message="Delphi J2EE build ending at ${dev.info.time}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: LOG-START                       -->
+  <!-- ************************************* -->
+	
+  <target name="log-start" depends="start-info" description="Starts logging the build.">
+    <mkdir dir="${build.dir.logs}"/>
+    <record name="${build.file.log.build}${build.number}.log" action="start" append="false"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: LOG-STOP                        -->
+  <!-- ************************************* -->
+
+  <target name="log-stop" depends="end-info" description="Stops logging the build.">
+    <record name="${build.file.log.build}${build.number}.log" action="stop"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: PREPARE                         -->
+  <!-- ************************************* -->
+
+  <target name="prepare" depends="log-start" description="Creates output directories to be used during the build.">
+    <mkdir dir="${build.dir.build}"/>
+    <mkdir dir="${build.dir.logs}"/>
+    <mkdir dir="${build.dir.deploy}"/>
+
+    <property name="project.compile.src"  value="${build.dir.src}/${project.compile.component}/${project.compile.java}"/>
+    <property name="project.compile.dest" value="${build.dir.classes}/${project.compile.component}/${project.compile.classes}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: COMPILE                         -->
+  <!-- ************************************* -->
+
+  <target name="compile" depends="prepare" description="Compiles the Java application source code.">
+    <mkdir dir="${project.compile.dest}"/>
+    <javac srcdir = "${project.compile.src}"
+           destdir = "${project.compile.dest}" 
+           classpath = "${project.compile.classpath}"  
+           debug = "${project.compile.debug}" 
+           deprecation = "${project.compile.deprecation}" 
+           optimize = "${project.compile.optimize}" 
+           verbose = "${project.compile.verbose}" 
+           includes = "${project.compile.includes}"
+           listfiles = "${project.compile.listfiles}">
+    </javac>
+  </target>
+
+

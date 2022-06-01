@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ant2html.xsl"?>
+
+  <!-- ************************************* -->
+  <!-- Task: INIT                            -->
+  <!-- ************************************* -->
+	
+  <target name="init" depends="project-init" description="Initializes the build process">
+    <tstamp prefix="start">
+      <format property="BUILD-TIME" pattern="yyyy/MM/dd hh:mm aa" locale="en"/>
+    </tstamp>
+    <property file="../../global.properties"/>
+    <property file="project.properties"/>
+    <property file="../../build.properties"/>
+
+   
+    <echo message="ant.version: ${ant.version}"/>
+    <echo message="ant.java.version: ${ant.java.version}"/>
+    <buildnumber/>
+    <echo message="build number: ${build.number}"/>
+
+    <condition property="build.dao">
+      <and>
+        <istrue value="${project.generate-dao}"/>
+      </and>    
+    </condition>
+
+    <echo message="Building DAO Objects: ${build.dao}"/>
+
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: START-INFO                      -->
+  <!-- ************************************* -->
+
+  <target name="start-info" depends="init" description="Displays starting information.">
+    <echo message="Delphi J2EE build starting: ${start.BUILD-TIME}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: END-INFO                        -->
+  <!-- ************************************* -->
+
+  <target name="end-info" depends="init" description="Displays ending information.">
+    <tstamp prefix="end">
+      <format property="BUILD-TIME" pattern="yyyy/MM/dd hh:mm aa" locale="en"/>
+    </tstamp>
+    <echo message="Delphi J2EE build ending: ${end.BUILD-TIME}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: LOG-START                       -->
+  <!-- ************************************* -->
+	
+  <target name="log-start" depends="start-info" description="Starts logging the build.">
+    <echo message="Logging to: ${build.dir.logs}/${build.file.log.build}${build.number}.log"/>
+    <mkdir dir="${build.dir.logs}"/>
+    <record name="${build.file.log.build}${build.number}.log" action="start" append="false"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: LOG-STOP                        -->
+  <!-- ************************************* -->
+
+  <target name="log-stop" depends="end-info" description="Stops logging the build.">
+    <record name="${build.file.log.build}${build.number}.log" action="stop"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: CLEAN                           -->
+  <!-- ************************************* -->
+
+  <target name="clean" depends="init" description="Removes './build' scratch directory ">
+    <delete dir="${build.dir.build}"/>
+    <delete dir="${project.compile.component}/build"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: PREPARE                         -->
+  <!-- ************************************* -->
+
+  <target name="prepare" depends="log-start,clean" description="Creates output directories to be used during the build.">
+    <mkdir dir="${build.dir.build}"/>
+    <mkdir dir="${build.dir.logs}"/>
+    <mkdir dir="${build.dir.deploy}"/>
+
+    <property name="project.compile.src"  value="${project.compile.component}/${build.dir.src}/${project.compile.java}"/>
+    <property name="project.compile.dest" value="${project.compile.component}/${build.dir.classes}/${project.compile.classes}"/>
+    <property name="project.compile.dest.xsltc" value="${project.compile.component}/build/xsltc"/>
+
+    <property name="project.generate-dao.xml.src"  value="${project.compile.component}/${build.dir.src}/${project.generate-dao.xml}"/>
+    <property name="project.generate-dao.java.dest" value="${project.compile.src}"/>
+    <property name="project.generate-dao.xsl.src" value="${project.generate-dao.xsl}"/>
+
+    <echo message="Javac Src Dir: ${project.compile.src}"/>
+    <echo message="Javac Dest Dir: ${project.compile.dest}"/>
+
+    <echo message="Generate XML Src Dir: ${project.generate-dao.xml.src}"/>
+    <echo message="Generate Java Dest Dir: ${project.generate-dao.java.dest}"/>
+    <echo message="Generate XSL Src Dir: ${project.generate-dao.xsl.src}"/>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: GENERATE-DAO                    -->
+  <!-- ************************************* -->
+
+  <target name="generate-dao" depends="prepare" if="build.dao" description="Generates Java Classes from XML DAO Definitions.">
+    <mkdir dir="${project.generate-dao.java.dest}"/>
+
+    <xslt basedir = "${project.generate-dao.xml.src}"
+          destdir = "${project.generate-dao.java.dest}" 
+          extension = ".java"
+          style = "${project.generate-dao.xsl.src}/bo.xsl"
+          includes = "**/*.xml">
+    </xslt>
+
+    <echo message="Generated Business Objects."/>
+
+    <xslt basedir = "${project.generate-dao.xml.src}"
+          destdir = "${project.generate-dao.java.dest}" 
+          extension = "ImplBase.java"
+          style = "${project.generate-dao.xsl.src}/boImplBase.xsl"
+          includes = "**/*.xml">
+    </xslt>
+
+    <echo message="Generated Business Object ImplBases."/>
+
+    <xslt basedir = "${project.generate-dao.xml.src}"
+          destdir = "${project.generate-dao.java.dest}" 
+          extension = "Factory.java"
+          style = "${project.generate-dao.xsl.src}/boFactory.xsl"
+          includes = "**/*.xml">
+    </xslt>
+
+    <echo message="Generated Business Object Factories."/>
+
+    <xslt basedir = "${project.generate-dao.xml.src}"
+          destdir = "${project.generate-dao.java.dest}" 
+          extension = "FactoryImplBase.java"
+          style = "${project.generate-dao.xsl.src}/boFactoryImplBase.xsl"
+          includes = "**/*.xml">
+    </xslt>
+
+    <echo message="Overwrite generated classes that have been extended."/>
+
+    <!-- copy extending classes over generated classes -->
+    <copy todir="${project.generate-dao.java.dest}" overwrite="yes">
+      <fileset dir="${project.generate-dao.java.dest}" includes="**/*.javaext"/>
+      <mapper type="glob" from="*.javaext" to="*.java"/>
+    </copy>
+
+    <echo message="Generated Business Object Factory ImplBases."/>
+
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: COMPILE                         -->
+  <!-- ************************************* -->
+
+  <target name="compile" depends="generate-dao" description="Compiles the Java application source code.">
+    <mkdir dir="${project.compile.dest}"/>
+    <javac srcdir = "${project.compile.src}"
+           destdir = "${project.compile.dest}" 
+           classpath = "${project.compile.classpath}"  
+           debug = "${project.compile.debug}" 
+           deprecation = "${project.compile.deprecation}" 
+           optimize = "${project.compile.optimize}" 
+           verbose = "${project.compile.verbose}" 
+           includes = "${project.compile.includes}"
+           listfiles = "${project.compile.listfiles}">
+    </javac>
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: GENERATE-WAR                    -->
+  <!-- ************************************* -->
+
+  <target name="generate-war" depends="compile"	description="Generates the WAR directory structure and copies descriptors.">
+
+    <mkdir dir="${build.dir.war}/WEB-INF/classes"/>
+    <mkdir dir="${build.dir.war}/WEB-INF/lib"/>
+    <mkdir dir="${build.dir.war}/WEB-INF/classes/xml"/>
+    <mkdir dir="${build.dir.war}/WEB-INF/classes/xsl"/>
+		
+    <property name="project.war.src"  value="${project.compile.component}/${project.compile.webcontent}"/>
+    <property name="project.war.lib"  value="${project.compile.component}/${project.compile.webcontent}/WEB-INF/lib"/>
+    <property name="project.war.xml"  value="${project.compile.component}/${project.compile.webcontent}/WEB-INF/classes/xml"/>
+    <property name="project.war.xsl"  value="${project.compile.component}/${project.compile.webcontent}/WEB-INF/classes/xsl"/>
+
+    <echo message="copy from: ${project.war.src} to: ${build.dir.war}"/>
+
+    <!-- copy base content to war -->
+
+    <copy todir="${build.dir.war}" overwrite="yes">
+      <fileset dir="${project.war.src}">
+        <include name="**/*.*"/>
+        <include name="**/*.css"/>
+        <include name="**/*.gif"/>
+        <include name="**/*.htm"/>
+        <include name="**/*.html"/>
+        <include name="**/*.jpg"/>
+        <include name="**/*.js"/>
+        <exclude name="**/*.class"/>
+        <exclude name="**/*$$$"/>
+        <exclude name="**/prod*.*"/>
+        <exclude name="**/test*.*"/>
+        <exclude name="**/dev*.*"/>
+      </fileset>
+    </copy>
+
+
+    <!-- copy classes to war -->
+    <copy todir="${build.dir.war}/WEB-INF/classes" overwrite="yes">
+      <fileset dir="${project.compile.dest}">
+        <include name="**/*.class"/>
+      </fileset>
+    </copy>
+
+    <!-- copy lib to war -->
+    <copy todir="${build.dir.war}/WEB-INF/lib" overwrite="yes">
+      <fileset dir="${project.war.lib}" includes="**/*.jar"/>
+    </copy>
+
+    <!-- copy xml to war -->
+    <copy todir="${build.dir.war}/WEB-INF/classes/xml" overwrite="yes">
+      <fileset dir="${project.war.xml}" includes="**/*.xml"/>
+    </copy>
+
+    <!-- copy xsl to war -->
+    <copy todir="${build.dir.war}/WEB-INF/classes/xsl" overwrite="yes">
+      <fileset dir="${project.war.xsl}" includes="**/*.xsl"/>
+    </copy>
+
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: GENERATE-WAR-CONFIG             -->
+  <!-- ************************************* -->
+
+  <target name="generate-war-config" depends="generate-war" description="Updates WAR configuration.">
+
+    <!-- copy web.xml file war -->
+    <copy todir="${build.dir.war}/WEB-INF" overwrite="yes">
+      <fileset dir="${project.war.src}/WEB-INF" includes="${project.generatewar.environment}-web.xml"/>
+    </copy>
+    <move file="${build.dir.war}/WEB-INF/${project.generatewar.environment}-web.xml" tofile="${build.dir.war}/WEB-INF/web.xml"/>
+
+    <!-- copy log4j.xml file war -->
+    <copy todir="${build.dir.war}/WEB-INF/classes" overwrite="yes">
+      <fileset dir="${project.war.src}/WEB-INF/classes" includes="${project.generatewar.environment}-log4j.xml"/>
+    </copy>
+    <move file="${build.dir.war}/WEB-INF/classes/${project.generatewar.environment}-log4j.xml" tofile="${build.dir.war}/WEB-INF/classes/log4j.xml"/>
+
+    <!-- copy request-mappings.xml file war -->
+    <copy todir="${build.dir.war}/WEB-INF/classes" overwrite="yes">
+      <fileset dir="${project.war.src}/WEB-INF/classes" includes="request-mappings.xml"/>
+    </copy>
+
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: WAR                             -->
+  <!-- ************************************* -->
+
+  <target name="war" depends="generate-war-config" description="Creates a WAR file for deployment.">
+
+    <jar jarfile="${project.compile.component}/${build.dir.build}/${project.compile.component}.war">
+      <fileset dir="${build.dir.war}"/>
+        <manifest>
+          <attribute name="Built-By"	value="${project.location} on ${TODAY}; Build Number ${build.number}"/>
+          <attribute name="Implementation-Title"   value="${project.title}"/>
+          <attribute name="Implementation-Vendor"  value="${project.vendorname}"/>
+          <attribute name="Implementation-Version" value="${project.version}"/>
+        </manifest>
+    </jar>
+
+  </target>
+
+  <!-- ************************************* -->
+  <!-- Task: JAR                             -->
+  <!-- ************************************* -->
+
+  <target name="jar" depends="compile" description="Creates a JAR file for distribution.">
+
+    <jar jarfile="${project.compile.component}/${build.dir.build}/${project.compile.component}.jar">
+      <fileset dir="${project.compile.dest}"/>
+        <manifest>
+          <attribute name="Built-By"	value="${project.location} on ${TODAY}; Build Number ${build.number}"/>
+          <attribute name="Implementation-Title"   value="${project.title}"/>
+          <attribute name="Implementation-Vendor"  value="${project.vendorname}"/>
+          <attribute name="Implementation-Version" value="${project.version}"/>
+        </manifest>
+    </jar>
+
+  </target>
+
+ <!-- ************************************* -->
+  <!-- Task: JBOSS DEPLOY                   -->
+  <!-- ************************************* -->
+
+	<target name="deploy-jboss" depends="war" description="Deploying to JBOSS">
+	<echo message="JBOSS Location ${jboss.home}"/>
+
+	<copy todir="${jboss.home}/server/default/deploy" overwrite="yes">
+      <fileset dir="${project.compile.component}/${build.dir.build}" includes="**/*.war"/>
+    </copy>
+	
+	</target>
+
+  <!-- ************************************* -->
+  <!-- Task: JAVADOC                         -->
+  <!-- ************************************* -->
+
+  <target name="javadoc" depends="prepare" description="Creates the JavaDoc documentation from the Java code.">
+    <property name="javadoc.dest" value="${project.compile.component}/${build.dir.javadoc}"/>
+    <delete  dir="${javadoc.dest}"/>
+    <mkdir   dir="${javadoc.dest}"/>
+
+    <javadoc packagenames    = "${project.javadoc.packagenames}"
+				 destdir         = "${javadoc.dest}"
+				 classpath       = "${project.compile.classpath}"
+				 defaultexcludes = "${project.javadoc.defaultexcludes}"
+				 author          = "${project.javadoc.author}"
+				 version         = "${project.javadoc.version}"
+				 use             = "${project.javadoc.use}"
+				 windowtitle     = "${project.title}">
+      <fileset dir="${project.compile.src}" includes="**/*.java"/>
+      <bottom><![CDATA[<i>${global.copyrightnotice}</i>]]></bottom>
+    </javadoc>
+  </target>
+<!--
+  <target name="javadoc" depends="prepare" description="Removes './build' scratch directory ">
+    <delete dir="${build.dir.build}"/>
+    <delete dir="${project.compile.component}/build"/>
+  </target>
+-->
+

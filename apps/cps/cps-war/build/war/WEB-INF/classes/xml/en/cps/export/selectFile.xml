@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com)  -->
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/cps/export/selectFile.xsl"?>
+
+ <!DOCTYPE Screen [
+      <!ENTITY navigation SYSTEM "../demo-navigation.xml">
+      <!ENTITY allTabs SYSTEM "demo-export-allTabs1.xml">
+    ]>  
+
+<Screen>
+  <Model>
+    <Request>
+      <Title>DELPHI - CPS V1.0</Title>
+    </Request>
+    <Session> 
+      <UserProfile browserName="MSIE" name="Administrator" uid="admin">
+        <Roles>
+          <Role name="Admin"/>
+          <Role name="Supplier"/>
+        </Roles>
+      </UserProfile>
+
+      &navigation;
+
+      &allTabs;
+
+      <SelectFileCriteria name="*" type="Allocation" fromDt="01-05-2004" toDt="10-05-2004"/>
+      <ResultSetPagingManager cStartRowId="1" cEndRowId="5" cPage="1" cPageNumRows="10"  
+       firstB="false" lastB="false" nPages="1" nRows="5" name="FileSearchCriteriaPagingManager" 
+       nextB="false" prevB="false"/>
+    </Session>
+    <Entity>
+      <ImgBaseUrl>..\..\..\..\..\..\images</ImgBaseUrl>
+      <RelUrl>../../cps</RelUrl>
+      <JavaScriptBaseUrl>..\..\..\..\..\..\..\javascript</JavaScriptBaseUrl>
+      <HtmlBaseUrl>..\..\..\..\..\..\..</HtmlBaseUrl>
+    </Entity>
+  </Model>
+  <View>
+    <FileResultSet>
+      <File>
+        <id>1</id>
+        <dt>4-5-2004 13:05:07</dt>
+        <name>DRI BUICK</name>
+        <type>Source</type>
+        <comment>DRI Entries for Park Avenue and Rainier</comment>
+      </File>
+      <File>
+        <id>2</id>
+        <dt>4-19-2004 10:23:52</dt>
+        <name>DRI PONTIAC</name>
+        <type>Source</type>
+        <comment>DRI Entries for Pontiac Aztek</comment>
+      </File>
+      <File>
+        <id>3</id>
+        <dt>5-2-2004 12:20:05</dt>
+        <name>DRI</name>
+        <type>Source</type>
+        <comment>comment </comment>
+      </File>
+      <File>
+        <id>4</id>
+        <dt>8-24-2004 08:23:43</dt>
+        <name>DRI</name>
+        <type>Source</type>
+        <comment>comment </comment>
+      </File>
+      <File>
+        <id>5</id>
+        <dt>10-11-2004 15:42:34</dt>
+        <name>DRI</name>
+        <type>Source</type>
+        <comment>comment </comment>
+      </File>
+    </FileResultSet>
+  </View>
+</Screen>  
+
